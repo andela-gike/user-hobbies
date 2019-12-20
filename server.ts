@@ -1,10 +1,11 @@
+import { config } from "dotenv"
 import * as Hapi from '@hapi/hapi';
 import * as HapiSwagger from 'hapi-swagger';
 import { hobbyRoute, indexRoute, userRoute } from './src/routes/indexRoute';
 import { connectDb } from './src/services/mongoDBServices';
 
-const port = 3001 || process.env.PORT;
-
+config();
+const port = process.env.PORT || 3001;
 const server = new Hapi.Server({
     host: 'localhost',
     port
