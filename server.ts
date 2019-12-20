@@ -5,7 +5,7 @@ import { connectDb } from './src/services/mongoDBServices';
 
 const port = 3001 || process.env.PORT;
 
-const server = Hapi.server({
+const server = new Hapi.Server({
     host: 'localhost',
     port
 });

@@ -6,7 +6,10 @@
   "scripts": {
     "start-dev": "nodemon server.ts",
     "test": "jest --coverage --runInBand",
-    "run-lint": "eslint src/**/*.ts"
+    "run-lint": "eslint src/**/*.ts",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "serve": "node output/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   },
   "homepage": "https://github.com/andela-gike/user-hobbies#readme",
   "devDependencies": {
+    "@types/hapi__hapi": "^18.2.6",
     "@types/jest": "^24.0.24",
     "@types/mongoose": "^5.5.34",
     "@types/node": "^12.12.18",

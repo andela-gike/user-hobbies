@@ -1,3 +1,4 @@
+import * as Hapi from '@hapi/hapi';
 import mongoose from 'mongoose';
 import init from '../../../server';
 
@@ -34,7 +35,7 @@ describe('User API Request', () => {
         payload: JSON.stringify({ name: userName }),
         url: '/api/v1/users'
     };
-    const data = await init.inject(options);
+    const data: Hapi.ServerInjectResponse | any = await init.inject(options);
     expect(data.statusCode).toBe(200);
     expect(data.result['name']).toBe(userName);
   });
@@ -47,7 +48,7 @@ describe('User API Request', () => {
         payload: JSON.stringify({ name: userName }),
         url: '/api/v1/users'
     };
-    let data = await init.inject(options);
+    let data: Hapi.ServerInjectResponse | any = await init.inject(options);
     expect(data.statusCode).toBe(200);
     const userId = data.result['_id'];
     // update user with no value
@@ -75,7 +76,7 @@ describe('User API Request', () => {
         payload: JSON.stringify({ name: userName }),
         url: '/api/v1/users'
     };
-    let data = await init.inject(options);
+    let data: Hapi.ServerInjectResponse | any = await init.inject(options);
     expect(data.statusCode).toBe(200);
     const userId = data.result['_id'];
 
@@ -101,7 +102,7 @@ describe('User API Request', () => {
         payload: JSON.stringify({ name: userName }),
         url: '/api/v1/users'
     };
-    const data = await init.inject(options);
+    const data: Hapi.ServerInjectResponse | any = await init.inject(options);
     expect(data.statusCode).toBe(200);
     const userId = data.result['_id'];
 

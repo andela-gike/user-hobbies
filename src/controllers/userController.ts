@@ -2,9 +2,17 @@ import * as Hapi from '@hapi/hapi';
 import Hobby from '../models/hobbyModel';
 import User from '../models/userModel';
 
+interface RequestUserPayload extends Hapi.Request {
+    payload: {
+      name: string
+    },
+    params: {
+        userId: string
+    }
+  }
 export class UserController {
 
-    public async addNewUser(req: Hapi.Request) {
+    public async addNewUser(req: RequestUserPayload) {
         const { name } = req.payload;
         try {
             const newUser = new User({ name });
@@ -35,7 +43,7 @@ export class UserController {
         }
     }
 
-    public async getUserWithID(req: Hapi.Request) {
+    public async getUserWithID(req: RequestUserPayload) {
         const { userId } = req.params;
         try {
             const user: any = await User.findById(userId);
@@ -46,7 +54,7 @@ export class UserController {
 
     }
 
-    public async updateUser(req: Hapi.Request) {
+    public async updateUser(req: RequestUserPayload) {
         const { userId } = req.params;
         const { name } = req.payload;
         try {
@@ -64,7 +72,7 @@ export class UserController {
         }
     }
 
-    public async deleteUser(req: Hapi.Request) {
+    public async deleteUser(req: RequestUserPayload) {
         const { userId } = req.params;
         try {
             const user = await User.findByIdAndDelete(userId);
@@ -79,7 +87,7 @@ export class UserController {
           }
     }
 
-    public async getUserHobbies(req: Hapi.Request) {
+    public async getUserHobbies(req: RequestUserPayload) {
         const { userId: user } = req.params;
         try {
             const hobbies = await Hobby.find({ user });

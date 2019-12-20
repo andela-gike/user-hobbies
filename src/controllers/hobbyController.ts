@@ -1,8 +1,20 @@
 import * as Hapi from '@hapi/hapi';
 import Hobby from '../models/hobbyModel';
 
+interface RequestHobbyPayload extends Hapi.Request {
+  payload: {
+    name: string;
+    passionLevel: number;
+    year: number;
+    userId: string;
+  },
+  params: {
+    id: string;
+  }
+}
+
 export class HobbyController {
-  public async addNewHobby(req: Hapi.Request) {
+  public async addNewHobby(req: RequestHobbyPayload) {
     const {
       name, passionLevel, year, userId: user,
     } = req.payload;
@@ -17,7 +29,7 @@ export class HobbyController {
     }
   }
 
-  public async getHobby(req: Hapi.Request) {
+  public async getHobby(req: RequestHobbyPayload) {
     const { id } = req.params;
     try {
       const isPresent = await Hobby.exists({ _id: id });
@@ -32,7 +44,7 @@ export class HobbyController {
     }
   }
 
-  public async updateHobby(req: Hapi.Request) {
+  public async updateHobby(req: RequestHobbyPayload) {
     const { id } = req.params;
     const { name, passionLevel, year } = req.payload;
     try {
@@ -47,7 +59,7 @@ export class HobbyController {
     }
   }
 
-  public async deleteHobby(req: Hapi.Request) {
+  public async deleteHobby(req: RequestHobbyPayload) {
     const { id } = req.params;
     try {
       const hobby = await Hobby.findByIdAndDelete(id);

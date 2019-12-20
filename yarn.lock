@@ -637,6 +637,61 @@
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
   integrity sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
 
+"@types/hapi__boom@*":
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/@types/hapi__boom/-/hapi__boom-7.4.1.tgz#06439d7637245dcbe6dd6548d2a91f2c1243d80b"
+  integrity sha512-x/ZK824GomII7Yoei/nMoB46NQcSfGe0iVpZK3uUivxIAfUUSzRvu8RQO7ZkKapIgzgshHZc+GR+z/BQ8l2VLg==
+
+"@types/hapi__catbox@*":
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/@types/hapi__catbox/-/hapi__catbox-10.2.2.tgz#b13fbdd6006c8793eb80919158593bc2bf8307c4"
+  integrity sha512-AWK70LgRsRWL1TNw+aT0IlS56E0pobvFdr/en0K8XazyK4Ey6T/jXhQqv/iQ6FJAAU+somMzgmt9fWq2TaaOkA==
+
+"@types/hapi__hapi@^18.2.6":
+  version "18.2.6"
+  resolved "https://registry.yarnpkg.com/@types/hapi__hapi/-/hapi__hapi-18.2.6.tgz#61c1b210c55dee4636df594e7a0868ad48c8042a"
+  integrity sha512-sXFlSg9btu/LdHqK/N/kuQXVqZhSvibXbtZc0KfEcelRXKthdU5ZSu5qItDIov7SYnyK2faMe7dbZaC/VpC33w==
+  dependencies:
+    "@types/hapi__boom" "*"
+    "@types/hapi__catbox" "*"
+    "@types/hapi__iron" "*"
+    "@types/hapi__joi" "*"
+    "@types/hapi__mimos" "*"
+    "@types/hapi__podium" "*"
+    "@types/hapi__shot" "*"
+    "@types/node" "*"
+
+"@types/hapi__iron@*":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/hapi__iron/-/hapi__iron-5.1.0.tgz#35ebddae3a100c468b84fe075689522ad2f3703d"
+  integrity sha512-RxYHIc8wFe8M1jMwgovskoHNVjuP1q0tUGCNnbHnhA4SBMyYg+JHIAz8yFibSwgF4gWYh5yHMpbmK5kmnG4HRA==
+  dependencies:
+    "@types/node" "*"
+
+"@types/hapi__joi@*":
+  version "16.0.4"
+  resolved "https://registry.yarnpkg.com/@types/hapi__joi/-/hapi__joi-16.0.4.tgz#c894d6498cc64aa56b73fbc175bb2c6be8c5f543"
+  integrity sha512-wyZP3JUZNra0Mn6jlYkGorouWJ00K0r0Qys5j8Ycp0ssF267NMfpQNgHWAcV14xXSuChF7H68CPuqJO15YuHyQ==
+
+"@types/hapi__mimos@*":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@types/hapi__mimos/-/hapi__mimos-4.1.0.tgz#47dbf89ebfc05183c1de2797e9426793db9a0d85"
+  integrity sha512-hcdSoYa32wcP+sEfyf85ieGwElwokcZ/mma8eyqQ4OTHeCAGwfaoiGxjG4z1Dm+RGhIYLHlW54ji5FFwahH12A==
+  dependencies:
+    "@types/mime-db" "*"
+
+"@types/hapi__podium@*":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@types/hapi__podium/-/hapi__podium-3.4.0.tgz#8efbe18c422e5306a7ee970d48448cf8ff4da37c"
+  integrity sha512-LE85jLgqR5HscGQ7SaSz6FMRsKlQ1wHVbYc9u0yq7NKDRvZiQFIrr3Pl1RPzK7QNUdZP8zmJibe8q0JcafTAJQ==
+
+"@types/hapi__shot@*":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@types/hapi__shot/-/hapi__shot-4.1.0.tgz#c2f096bf89906e25b530869becca44d40b168b75"
+  integrity sha512-vIySJYkwIGXMB5eFaZu3U8dS9CAZmteJfmkRn9bYH5uNcSvVgiwDROiwAkD7ej88qA+RZPkUK70KmeDs3LRHvw==
+  dependencies:
+    "@types/node" "*"
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -668,6 +723,11 @@
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
+
+"@types/mime-db@*":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@types/mime-db/-/mime-db-1.27.0.tgz#9bc014a1fd1fdf47649c1a54c6dd7966b8284792"
+  integrity sha1-m8AUof0f30dknBpUxt15ZrgoR5I=
 
 "@types/mongodb@*":
   version "3.3.13"
